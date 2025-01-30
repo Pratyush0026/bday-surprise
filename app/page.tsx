@@ -8,6 +8,7 @@ import Balloons from "./components/Balloons"
 import Cake from "./components/Cake"
 import Flowers from "./components/Flowers"
 import { Button } from "@/components/ui/button"
+import { Engine } from "tsparticles-engine"
 
 const poem = `
 In a world of millions, I found my light,
@@ -64,7 +65,7 @@ export default function BirthdaySurprise() {
     return () => clearInterval(timer)
   }, [])
 
-  const particlesInit = async (main) => {
+  const particlesInit = async (main: Engine) => {
     await loadFull(main)
   }
 
